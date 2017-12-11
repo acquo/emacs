@@ -3833,6 +3833,7 @@ w32_wnd_proc (HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 	  set_ime_composition_window_fn (context, &form);
 	  release_ime_context_fn (hwnd, context);
+	  goto dflt;
 	}
       /* We should "goto dflt" here to pass WM_IME_STARTCOMPOSITION to
 	 DefWindowProc, so that the composition window will actually
